@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "DetailViewController.h"
+#import "JFTextViewNoInset.h"
 
 
 @implementation RootViewController
@@ -25,8 +26,14 @@
     
     NSMutableArray *tempArray = [[NSMutableArray alloc] initWithCapacity:10];
     for (int i = 0; i < 10; i++) {
-        [tempArray addObject:[NSMutableString stringWithFormat:@"Editable item %d", i + 1]];
+        NSMutableString *tempString = [NSMutableString stringWithFormat:@"Editable item %d", i + 1];
+        for (int j = 0; j < i; j++) {
+            [tempString appendString:@" meow meow meow"];
+        }
+        [tempArray addObject:tempString];
     }
+    
+    [self.view addSubview:[EditableTableViewCell dummyTextView]];
     
     textItems = tempArray;
 }
@@ -82,7 +89,7 @@
     
     if (editingTableViewCell.text == text) {
         // Use the cell's version of the text because edits may not have been committed back the array
-        return [EditableTableViewCell heightForText:editingTableViewCell.textView.text];
+        return editingTableViewCell.textView.contentSize.height + 11;
     }
     else {
         return [EditableTableViewCell heightForText:text];
@@ -90,6 +97,10 @@
     
 }
 
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
 
 
 #pragma mark -
@@ -105,10 +116,30 @@
 }
 
 
-- (void)editableTableViewCellDidChangeSize:(EditableTableViewCell *)editableTableViewCell {
+- (void)editableTableViewCell:(EditableTableViewCell *)editableTableViewCell heightChangedTo:(CGFloat)newHeight {
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:[textItems indexOfObject:editableTableViewCell.text] inSection:0];
-    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationNone];
+    CGRect frame = editingTableViewCell.frame;
+    
+    CGFloat delta = newHeight - frame.size.height;
+    
+    frame.size.height = newHeight;
+    
+    [UIView beginAnimations:nil context:NULL];
+    
+    editingTableViewCell.frame = frame;
+    
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:editableTableViewCell];
+    
+    for (int row = indexPath.row + 1; row < [self.tableView numberOfRowsInSection:0]; row++) {
+        indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+        
+        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        frame = cell.frame;
+        frame.origin.y += delta;
+        cell.frame = frame;
+    }
+    
+    [UIView commitAnimations];
 }
 
 

@@ -9,7 +9,7 @@
 #import "EditableTableViewCell.h"
 #import "JFTextViewNoInset.h"
 
-static const CGFloat kTextViewWidth = 320 - 22;
+static const CGFloat kTextViewWidth = 320;
 
 #define kFontSize ([UIFont systemFontSize])
 
@@ -19,7 +19,7 @@ static const CGFloat kTopPadding = 6;
 static const CGFloat kBottomPadding = 6;
 
 static UIFont *textViewFont;
-
+static UITextView *dummyTextView;
 
 @implementation EditableTableViewCell
 
@@ -27,12 +27,7 @@ static UIFont *textViewFont;
 @synthesize textView;
 @synthesize text;
 
-+ (void)initialize {
-    textViewFont = [[UIFont systemFontOfSize:kFontSize] retain];
-}
-
-
-- (UITextView *)createTextView {
++ (UITextView *)createTextView {
     UITextView *newTextView = [[JFTextViewNoInset alloc] initWithFrame:CGRectZero];
     newTextView.font = textViewFont;
     newTextView.backgroundColor = [UIColor whiteColor];
@@ -41,16 +36,40 @@ static UIFont *textViewFont;
     newTextView.showsVerticalScrollIndicator = NO;
     newTextView.showsHorizontalScrollIndicator = NO;
     newTextView.contentInset = UIEdgeInsetsZero;
-    newTextView.delegate = self;
     
     return newTextView;
 }
 
++ (UITextView *)dummyTextView {
+    return dummyTextView;
+}
+
+
++ (CGFloat)heightForText:(NSString *)text {
+    if (text == nil || text.length == 0) {
+        text = @"Xy";
+    }
+    
+    dummyTextView.text = text;
+    
+    CGSize textSize = dummyTextView.contentSize;
+    
+    return textSize.height + kBottomPadding + kTopPadding - 1;
+}
+
+
++ (void)initialize {
+    textViewFont = [[UIFont systemFontOfSize:kFontSize] retain];
+    dummyTextView = [EditableTableViewCell createTextView];
+    dummyTextView.alpha = 0.0;
+    dummyTextView.frame = CGRectMake(0, 0, kTextViewWidth, 500);
+}
 
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if ((self = [super initWithStyle:style reuseIdentifier:reuseIdentifier])) {
-        textView = [self createTextView];
+        textView = [EditableTableViewCell createTextView];
+        textView.delegate = self;
         [self.contentView addSubview:textView];
     }
     return self;
@@ -68,10 +87,6 @@ static UIFont *textViewFont;
     textView.frame = contentRect;
     textView.contentOffset = CGPointZero;
 
-    if (shadowTextView != nil) {
-        NSLog(@"Adjusting in superview");
-        shadowTextView.frame = [shadowTextView.superview convertRect:contentRect fromView:self.contentView];
-    }
 }
 
 
@@ -83,22 +98,12 @@ static UIFont *textViewFont;
 }
 
 
-+ (CGFloat)heightForText:(NSString *)text {
-    if (text == nil || text.length == 0) {
-        text = @"Xy";
-    }
-    
-    CGSize textSize = [text sizeWithFont:textViewFont constrainedToSize:CGSizeMake(kTextViewWidth, 2000)];
-    
-    return textSize.height + kBottomPadding + kTopPadding + kTextViewVerticalPadding;
-}
-
-
 - (void)setText:(NSMutableString *)newText {
     if (newText != text) {
         [text release];
         text = [newText retain];
         textView.text = newText;
+        NSLog(@"New height: %f", textView.contentSize.height);
     }
 }
 
@@ -106,25 +111,6 @@ static UIFont *textViewFont;
 #pragma mark -
 #pragma mark UITextView delegate
 
-- (BOOL)textViewShouldBeginEditing:(UITextView *)aTextView {
-    if (aTextView == textView) {
-        shadowTextView = [self createTextView];
-        shadowTextView.backgroundColor = [UIColor orangeColor];
-        shadowTextView.text = textView.text;
-        
-        [textView removeFromSuperview];
-
-        shadowTextView.frame = [self.superview convertRect:textView.frame fromView:self.contentView];
-        [self.superview addSubview:shadowTextView];
-
-        [shadowTextView becomeFirstResponder];
-        
-        return NO;
-    }
-    else {
-        return YES;
-    }
-}
 
 - (void) textViewDidBeginEditing:(UITextView *)theTextView {
     if ([delegate respondsToSelector:@selector(editableTableViewCellDidBeginEditing:)]) {
@@ -134,40 +120,28 @@ static UIFont *textViewFont;
 
 
 - (void)textViewDidEndEditing:(UITextView *)theTextView {
-    if (theTextView == shadowTextView) {
-        NSLog(@"Shadow text view ended editing");
-    }
-    else {
-        NSLog(@"Other text view ended");
-    }
-    
-    NSLog(@"Saving string %@", theTextView.text);
-    
     [text setString:theTextView.text];
-    
-    NSLog(@"Text is now %@", text);
 
     if ([delegate respondsToSelector:@selector(editableTableViewCellDidEndEditing:)]) {
         [delegate editableTableViewCellDidEndEditing:self];
     }
-    
-    textView.frame = [self.superview convertRect:shadowTextView.frame toView:self.contentView];
-
-    [shadowTextView removeFromSuperview];
-    [self.contentView addSubview:textView];
-    
-    [shadowTextView release];
-    shadowTextView = nil;
 }
 
 
 - (void)textViewDidChange:(UITextView *)theTextView {
+    CGFloat suggested = [self suggestedHeight];
     
-    if (fabs([EditableTableViewCell heightForText:theTextView.text] - self.frame.size.height) > 0.001) {
-        if ([delegate respondsToSelector:@selector(editableTableViewCellDidChangeSize:)]) {
-            [delegate editableTableViewCellDidChangeSize:self];
+    if (fabs(suggested - self.frame.size.height) > 0.01) {
+        NSLog(@"Difference requires change");
+        if ([delegate respondsToSelector:@selector(editableTableViewCell:heightChangedTo:)]) {
+            [delegate editableTableViewCell:self heightChangedTo:suggested];
         }
     }
+}
+
+
+- (CGFloat)suggestedHeight {
+    return textView.contentSize.height + kTopPadding + kBottomPadding - 1;
 }
 
 #pragma mark -

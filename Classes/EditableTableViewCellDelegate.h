@@ -6,6 +6,6 @@
 
 - (void)editableTableViewCellDidBeginEditing:(EditableTableViewCell *)editableTableViewCell;
 - (void)editableTableViewCellDidEndEditing:(EditableTableViewCell *)editableTableViewCell;
-- (void)editableTableViewCellDidChangeSize:(EditableTableViewCell *)editableTableViewCell;
+- (void)editableTableViewCell:(EditableTableViewCell *)editableTableViewCell heightChangedTo:(CGFloat)newHeight;
 
 @end

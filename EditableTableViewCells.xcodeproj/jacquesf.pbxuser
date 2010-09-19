@@ -9,9 +9,9 @@
 	};
 	1D3623250D0F684500981E51 /* EditableTableViewCellsAppDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {632, 814}}";
+			sepNavIntBoundsRect = "{{0, 0}, {840, 825}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1537}";
+			sepNavVisRange = "{179, 1498}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* EditableTableViewCells */ = {
@@ -22,16 +22,30 @@
 	};
 	28042007108E984D000629CD /* RootViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {632, 533}}";
-			sepNavSelRange = "{449, 20}";
+			sepNavIntBoundsRect = "{{0, 0}, {840, 554}}";
+			sepNavSelRange = "{471, 0}";
 			sepNavVisRange = "{0, 563}";
 		};
 	};
 	28042008108E984D000629CD /* RootViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {632, 2156}}";
-			sepNavSelRange = "{4347, 0}";
-			sepNavVisRange = "{3422, 1635}";
+			sepNavIntBoundsRect = "{{0, 0}, {840, 1936}}";
+			sepNavSelRange = "{841, 0}";
+			sepNavVisRange = "{163, 1283}";
+		};
+	};
+	28042009108E984D000629CD /* DetailViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {840, 554}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 625}";
+		};
+	};
+	2804200A108E984D000629CD /* DetailViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 1606}}";
+			sepNavSelRange = "{2398, 68}";
+			sepNavVisRange = "{1646, 1282}";
 		};
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
@@ -46,8 +60,44 @@
 			ECFE468F1245C5DF001BB6AE /* EditableTableViewCells */,
 		);
 		perUserDictionary = {
-			PBXPerProjectTemplateStateSaveDate = 306562527;
-			PBXWorkspaceStateSaveDate = 306562527;
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					650,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 306572574;
+			PBXWorkspaceStateSaveDate = 306572574;
+		};
+		perUserProjectItems = {
+			ECFE47621245EBF6001BB6AE = ECFE47621245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47631245EBF6001BB6AE = ECFE47631245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47641245EBF6001BB6AE = ECFE47641245EBF6001BB6AE /* PlistBookmark */;
+			ECFE47651245EBF6001BB6AE = ECFE47651245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47661245EBF6001BB6AE = ECFE47661245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47671245EBF6001BB6AE = ECFE47671245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47681245EBF6001BB6AE = ECFE47681245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47691245EBF6001BB6AE = ECFE47691245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE476A1245EBF6001BB6AE = ECFE476A1245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE476B1245EBF6001BB6AE = ECFE476B1245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE476C1245EBF6001BB6AE = ECFE476C1245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE476D1245EBF6001BB6AE = ECFE476D1245EBF6001BB6AE /* PBXTextBookmark */;
 		};
 		sourceControlManager = ECFE46991245C5FF001BB6AE /* Source Control */;
 		userBuildSettings = {
@@ -69,6 +119,7 @@
 		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
 		enableDebugStr = 1;
 		environmentEntries = (
 		);
@@ -96,23 +147,153 @@
 	};
 	ECFE469C1245C669001BB6AE /* EditableTableViewCell.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {632, 533}}";
-			sepNavSelRange = "{330, 0}";
-			sepNavVisRange = "{0, 381}";
+			sepNavIntBoundsRect = "{{0, 0}, {840, 554}}";
+			sepNavSelRange = "{434, 0}";
+			sepNavVisRange = "{0, 441}";
 		};
 	};
 	ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {632, 1408}}";
-			sepNavSelRange = "{2615, 0}";
-			sepNavVisRange = "{1921, 1304}";
+			sepNavIntBoundsRect = "{{0, 0}, {840, 1760}}";
+			sepNavSelRange = "{651, 798}";
+			sepNavVisRange = "{311, 1384}";
 		};
 	};
 	ECFE469E1245C669001BB6AE /* EditableTableViewCellDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {632, 533}}";
-			sepNavSelRange = "{370, 0}";
-			sepNavVisRange = "{0, 378}";
+			sepNavIntBoundsRect = "{{0, 0}, {840, 554}}";
+			sepNavSelRange = "{392, 0}";
+			sepNavVisRange = "{0, 400}";
 		};
+	};
+	ECFE46A01245C669001BB6AE /* JFTextViewNoInset.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {840, 554}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 286}";
+		};
+	};
+	ECFE47621245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623240D0F684500981E51 /* EditableTableViewCellsAppDelegate.h */;
+		name = "EditableTableViewCellsAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 833;
+		vrLoc = 0;
+	};
+	ECFE47631245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 2804200A108E984D000629CD /* DetailViewController.m */;
+		name = "DetailViewController.m: 81";
+		rLen = 68;
+		rLoc = 2398;
+		rType = 0;
+		vrLen = 1282;
+		vrLoc = 1646;
+	};
+	ECFE47641245EBF6001BB6AE /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D1107310486CEB800E47090 /* EditableTableViewCells-Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+			UISupportedInterfaceOrientations,
+			0,
+		);
+		name = "/Users/jacquesf/Programming/Sandbox/EditableTableViewCells/EditableTableViewCells-Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	ECFE47651245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ECFE46A01245C669001BB6AE /* JFTextViewNoInset.m */;
+		name = "JFTextViewNoInset.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 286;
+		vrLoc = 0;
+	};
+	ECFE47661245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ECFE469E1245C669001BB6AE /* EditableTableViewCellDelegate.h */;
+		name = "EditableTableViewCellDelegate.h: 9";
+		rLen = 0;
+		rLoc = 392;
+		rType = 0;
+		vrLen = 400;
+		vrLoc = 0;
+	};
+	ECFE47671245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042009108E984D000629CD /* DetailViewController.h */;
+		name = "DetailViewController.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 625;
+		vrLoc = 0;
+	};
+	ECFE47681245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* EditableTableViewCellsAppDelegate.m */;
+		name = "EditableTableViewCellsAppDelegate.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1498;
+		vrLoc = 179;
+	};
+	ECFE47691245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042007108E984D000629CD /* RootViewController.h */;
+		name = "RootViewController.h: 20";
+		rLen = 0;
+		rLoc = 471;
+		rType = 0;
+		vrLen = 563;
+		vrLoc = 0;
+	};
+	ECFE476A1245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ECFE469C1245C669001BB6AE /* EditableTableViewCell.h */;
+		name = "EditableTableViewCell.h: 14";
+		rLen = 0;
+		rLoc = 434;
+		rType = 0;
+		vrLen = 441;
+		vrLoc = 0;
+	};
+	ECFE476B1245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 28042008108E984D000629CD /* RootViewController.m */;
+		name = "RootViewController.m: 31";
+		rLen = 0;
+		rLoc = 841;
+		rType = 0;
+		vrLen = 1283;
+		vrLoc = 163;
+	};
+	ECFE476C1245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */;
+		name = "EditableTableViewCell.m: 146";
+		rLen = 0;
+		rLoc = 3705;
+		rType = 0;
+		vrLen = 1251;
+		vrLoc = 221;
+	};
+	ECFE476D1245EBF6001BB6AE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */;
+		name = "EditableTableViewCell.m: 30";
+		rLen = 798;
+		rLoc = 651;
+		rType = 0;
+		vrLen = 1384;
+		vrLoc = 311;
 	};
 }
