@@ -1,0 +1,118 @@
+// !$*UTF8*$!
+{
+	1D3623240D0F684500981E51 /* EditableTableViewCellsAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 533}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 833}";
+		};
+	};
+	1D3623250D0F684500981E51 /* EditableTableViewCellsAppDelegate.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 814}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1537}";
+		};
+	};
+	1D6058900D05DD3D006BFB54 /* EditableTableViewCells */ = {
+		activeExec = 0;
+		executables = (
+			ECFE468F1245C5DF001BB6AE /* EditableTableViewCells */,
+		);
+	};
+	28042007108E984D000629CD /* RootViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 533}}";
+			sepNavSelRange = "{449, 20}";
+			sepNavVisRange = "{0, 563}";
+		};
+	};
+	28042008108E984D000629CD /* RootViewController.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 2156}}";
+			sepNavSelRange = "{4347, 0}";
+			sepNavVisRange = "{3422, 1635}";
+		};
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = ECFE468F1245C5DF001BB6AE /* EditableTableViewCells */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* EditableTableViewCells */;
+		addToTargets = (
+			1D6058900D05DD3D006BFB54 /* EditableTableViewCells */,
+		);
+		codeSenseManager = ECFE469A1245C5FF001BB6AE /* Code sense */;
+		executables = (
+			ECFE468F1245C5DF001BB6AE /* EditableTableViewCells */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 306562527;
+			PBXWorkspaceStateSaveDate = 306562527;
+		};
+		sourceControlManager = ECFE46991245C5FF001BB6AE /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	ECFE468F1245C5DF001BB6AE /* EditableTableViewCells */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = EditableTableViewCells;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	ECFE46991245C5FF001BB6AE /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	ECFE469A1245C5FF001BB6AE /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	ECFE469C1245C669001BB6AE /* EditableTableViewCell.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 533}}";
+			sepNavSelRange = "{330, 0}";
+			sepNavVisRange = "{0, 381}";
+		};
+	};
+	ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 1408}}";
+			sepNavSelRange = "{2615, 0}";
+			sepNavVisRange = "{1921, 1304}";
+		};
+	};
+	ECFE469E1245C669001BB6AE /* EditableTableViewCellDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {632, 533}}";
+			sepNavSelRange = "{370, 0}";
+			sepNavVisRange = "{0, 378}";
+		};
+	};
+}
