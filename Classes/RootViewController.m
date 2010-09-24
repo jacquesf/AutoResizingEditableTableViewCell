@@ -117,29 +117,9 @@
 
 
 - (void)editableTableViewCell:(EditableTableViewCell *)editableTableViewCell heightChangedTo:(CGFloat)newHeight {
-    
-    CGRect frame = editingTableViewCell.frame;
-    
-    CGFloat delta = newHeight - frame.size.height;
-    
-    frame.size.height = newHeight;
-    
-    [UIView beginAnimations:nil context:NULL];
-    
-    editingTableViewCell.frame = frame;
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:editableTableViewCell];
-    
-    for (int row = indexPath.row + 1; row < [self.tableView numberOfRowsInSection:0]; row++) {
-        indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-        
-        UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        frame = cell.frame;
-        frame.origin.y += delta;
-        cell.frame = frame;
-    }
-    
-    [UIView commitAnimations];
+    // Calling beginUpdates/endUpdates causes the table view to reload cell geometries
+    [self.tableView beginUpdates];
+    [self.tableView endUpdates];
 }
 
 

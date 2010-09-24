@@ -51,6 +51,7 @@
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeBuildConfigurationName = Debug;
 		activeExecutable = ECFE468F1245C5DF001BB6AE /* EditableTableViewCells */;
+		activeSDKPreference = iphonesimulator3.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* EditableTableViewCells */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* EditableTableViewCells */,
@@ -67,7 +68,7 @@
 					20,
 					650,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -82,26 +83,46 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 306572574;
-			PBXWorkspaceStateSaveDate = 306572574;
+			PBXPerProjectTemplateStateSaveDate = 306575877;
+			PBXWorkspaceStateSaveDate = 306575877;
 		};
 		perUserProjectItems = {
-			ECFE47621245EBF6001BB6AE = ECFE47621245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE47631245EBF6001BB6AE = ECFE47631245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE47641245EBF6001BB6AE = ECFE47641245EBF6001BB6AE /* PlistBookmark */;
-			ECFE47651245EBF6001BB6AE = ECFE47651245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE47661245EBF6001BB6AE = ECFE47661245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE47671245EBF6001BB6AE = ECFE47671245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE47681245EBF6001BB6AE = ECFE47681245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE47691245EBF6001BB6AE = ECFE47691245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE476A1245EBF6001BB6AE = ECFE476A1245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE476B1245EBF6001BB6AE = ECFE476B1245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE476C1245EBF6001BB6AE = ECFE476C1245EBF6001BB6AE /* PBXTextBookmark */;
-			ECFE476D1245EBF6001BB6AE = ECFE476D1245EBF6001BB6AE /* PBXTextBookmark */;
+			EC0516021245FA0C0009F235 /* PBXTextBookmark */ = EC0516021245FA0C0009F235 /* PBXTextBookmark */;
+			EC7E89801245F9F400837847 /* PBXTextBookmark */ = EC7E89801245F9F400837847 /* PBXTextBookmark */;
+			ECFE47621245EBF6001BB6AE /* PBXTextBookmark */ = ECFE47621245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47631245EBF6001BB6AE /* PBXTextBookmark */ = ECFE47631245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47641245EBF6001BB6AE /* PlistBookmark */ = ECFE47641245EBF6001BB6AE /* PlistBookmark */;
+			ECFE47651245EBF6001BB6AE /* PBXTextBookmark */ = ECFE47651245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47661245EBF6001BB6AE /* PBXTextBookmark */ = ECFE47661245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47671245EBF6001BB6AE /* PBXTextBookmark */ = ECFE47671245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47681245EBF6001BB6AE /* PBXTextBookmark */ = ECFE47681245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE47691245EBF6001BB6AE /* PBXTextBookmark */ = ECFE47691245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE476A1245EBF6001BB6AE /* PBXTextBookmark */ = ECFE476A1245EBF6001BB6AE /* PBXTextBookmark */;
+			ECFE476B1245EBF6001BB6AE /* PBXTextBookmark */ = ECFE476B1245EBF6001BB6AE /* PBXTextBookmark */;
 		};
 		sourceControlManager = ECFE46991245C5FF001BB6AE /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	EC0516021245FA0C0009F235 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */;
+		name = "EditableTableViewCell.m: 22";
+		rLen = 0;
+		rLoc = 547;
+		rType = 0;
+		vrLen = 1446;
+		vrLoc = 2390;
+	};
+	EC7E89801245F9F400837847 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */;
+		name = "EditableTableViewCell.m: 22";
+		rLen = 0;
+		rLoc = 547;
+		rType = 0;
+		vrLen = 1431;
+		vrLoc = 266;
 	};
 	ECFE468F1245C5DF001BB6AE /* EditableTableViewCells */ = {
 		isa = PBXExecutable;
@@ -127,6 +148,8 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = EditableTableViewCells;
+		savedGlobals = {
+		};
 		showTypeColumn = 0;
 		sourceDirectories = (
 		);
@@ -154,9 +177,9 @@
 	};
 	ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {840, 1760}}";
-			sepNavSelRange = "{651, 798}";
-			sepNavVisRange = "{311, 1384}";
+			sepNavIntBoundsRect = "{{0, 0}, {840, 1727}}";
+			sepNavSelRange = "{547, 0}";
+			sepNavVisRange = "{2390, 1446}";
 		};
 	};
 	ECFE469E1245C669001BB6AE /* EditableTableViewCellDelegate.h */ = {
@@ -275,25 +298,5 @@
 		rType = 0;
 		vrLen = 1283;
 		vrLoc = 163;
-	};
-	ECFE476C1245EBF6001BB6AE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */;
-		name = "EditableTableViewCell.m: 146";
-		rLen = 0;
-		rLoc = 3705;
-		rType = 0;
-		vrLen = 1251;
-		vrLoc = 221;
-	};
-	ECFE476D1245EBF6001BB6AE /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = ECFE469D1245C669001BB6AE /* EditableTableViewCell.m */;
-		name = "EditableTableViewCell.m: 30";
-		rLen = 798;
-		rLoc = 651;
-		rType = 0;
-		vrLen = 1384;
-		vrLoc = 311;
 	};
 }
